@@ -1,3 +1,4 @@
+
 puts "Creating 10 users..."
 10.times do
   user = User.create!(
@@ -18,4 +19,5 @@ puts "Creating 10 islands..."
   )
 end
 puts "It worked just fine."
+
 
