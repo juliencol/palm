@@ -1,10 +1,17 @@
-
-<% @islands.each do |island| %>
-<div class="card-product">
-  <div class="card-product-infos">
-    <h2> <%= link_to island.name, island_path(island)%></h2>
-    <p> Location : <%=island.location%><p>
-    <p> Description : <%=island.description%></p>
+ <div class="banner-content">
+    <h1>Palm </h1>
+    <p>Book your Island </p>
+  </div>
+<div class="container">
+  <div class="row">
+    <% @islands.each do |island| %>
+      <div class="card-product">
+        <div class="card-product-infos">
+          <h2> <%= link_to island.name, island_path(island)%></h2>
+          <p> Location : <%=island.location%></p>
+          <p> Description : <%=island.description%></p>
+        </div>
+      </div>
+    <%end%>
   </div>
 </div>
-<%end%>
