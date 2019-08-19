@@ -16,6 +16,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'faker'
+gem 'bootstrap'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
