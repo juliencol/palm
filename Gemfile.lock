@@ -66,8 +66,13 @@ GEM
       railties (>= 3.2, < 6.1)
     erubi (1.8.0)
     execjs (2.7.0)
+<<<<<<< HEAD
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
+=======
+    faker (2.1.2)
+      i18n (>= 0.8)
+>>>>>>> 5ea474186e76185cd391aad0ed04f2282eb344b1
     ffi (1.11.1)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
@@ -217,6 +222,7 @@ DEPENDENCIES
   bootsnap
   devise
   dotenv-rails
+  faker
   font-awesome-sass (~> 5.6.1)
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
