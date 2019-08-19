@@ -69,10 +69,8 @@ GEM
 <<<<<<< HEAD
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-=======
     faker (2.1.2)
       i18n (>= 0.8)
->>>>>>> 5ea474186e76185cd391aad0ed04f2282eb344b1
     ffi (1.11.1)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
