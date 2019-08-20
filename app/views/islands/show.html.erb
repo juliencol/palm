@@ -1,13 +1,14 @@
+<div class="main-container p-4">
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="https://loremflickr.com/160/80/island" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="https://loremflickr.com/160/80/island" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="https://loremflickr.com/160/80/island" class="d-block w-100" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -18,6 +19,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
 </div>
 
 
@@ -53,17 +55,21 @@
           <div class="col-6 pr-0">
             <div class="form-group p-0">
               <label for="Check-out">Check-out</label>
-              <input type="text" class="form-control" placeholder="Check-out">
+              <input type="date" class="form-control" placeholder="Check-out">
             </div>
           </div>
         </div>
 
           <div class="form-group">
-            <label for="Guests">Guests</label>
-            <input type="range" class="custom-range" min="0" max="" id="customRange2"></option>
+          <div class="range">
+          <input type="range" name="ageInputName" id="ageInputId" value="1" min="1" max="10" onchange="getvalor(this.value);" oninput="ageOutputId.value = ageInputId.value">
+              <input type="text" name="ageOutputName" id="ageOutputId">  Nights</input>
           </div>
 
-          <button type="button" class="btn btn-primary btn-lg btn-block">  <%= link_to "Book this island 🏝️", new_island_reservation_path(@island) %> </button>
+
+          </div>
+
+          <button type="button" class="btn btn-success btn-lg btn-block">  <%= link_to "Book this island 🏝️", new_island_reservation_path(@island) %> </button>
 
 
     </div>
