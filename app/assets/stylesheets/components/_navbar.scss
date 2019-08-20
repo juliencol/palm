@@ -2,6 +2,9 @@
   justify-content: space-between;
   background-color: white;
   transition: 0.5s background-color ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-palm .navbar-collapse {
