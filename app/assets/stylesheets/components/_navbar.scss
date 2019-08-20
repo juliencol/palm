@@ -1,13 +1,17 @@
-.navbar-lewagon {
+.navbar-palm {
   justify-content: space-between;
-  background: white;
-  margin-top: -16px;
+  background-color: white;
+  transition: 0.5s background-color ease;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-palm .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-palm .navbar-brand img {
   width: 40px;
+}
+
+.navbar-palm-transparent {
+  background-color: transparent;
 }
