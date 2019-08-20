@@ -7,12 +7,13 @@
   </div>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-8">
   <h1 class="text-center">Islands available for next week</h1>
   <div class="container d-flex flex-wrap justify-start">
     <% @islands.each do |island| %>
       <%= link_to island_path(island) do %>
         <div class="card-product">
+          <img src="">
             <div class="card-product-infos">
             <h2><%= island.name %></h2>
             <p>location: <%= island.location %></p>
