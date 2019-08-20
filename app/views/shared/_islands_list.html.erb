@@ -1,0 +1,13 @@
+<div class="container d-flex flex-wrap justify-start">
+  <% @islands.each do |island| %>
+    <%= link_to island_path(island) do %>
+      <div class="card-product">
+          <div class="card-product-infos">
+          <h2><%= island.name %></h2>
+          <p>location: <%= island.location %></p>
+          <p><%= island.description %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

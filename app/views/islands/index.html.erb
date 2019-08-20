@@ -1,18 +1,6 @@
- <div class="banner-content">
-    <h1>Palm </h1>
-    <p>Book your Island </p>
-  </div>
-<div class="container">
-  <div class="row">
-    <% @islands.each do |island| %>
-      <div class="card-product">
-        <div class="card-product-infos">
-          <h2> <%= link_to island.name, island_path(island)%></h2>
-          <p> Location : <%=island.location%></p>
-          <p> Description : <%=island.description%></p>
-        </div>
-      </div>
-    <%end%>
-    <p> <%=  link_to "New", new_island_path %> </p>
-  </div>
+<div class="container main-container">
+  <h1 class="text-center">Book your Island</h1>
+  <%= render "shared/islands_list" %>
+  <p class="mt-3 text-center"> <%=  link_to "Add your island", new_island_path %> </p>
 </div>
+

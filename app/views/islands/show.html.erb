@@ -1,6 +1,9 @@
-<div class="container mt-5">
-  <h1><%= @island.name %></h1>
-  <%= link_to "Book this island", new_island_reservation_path(@island) %>
-  <p> <%= link_to "Back to islands", islands_path %> </p>
-  <p> <%= link_to "Edit this island", edit_island_path(@island) %></p>
+<div class="main-container">
+  <div class="container">
+    <h1><%= @island.name %></h1>
+    <p><%= @island.location %></p>
+    <p><%= @island.description %></p>
+    <%= link_to "Book this island", new_island_reservation_path(@island) %>
+    <p> <%= link_to "Back to islands", islands_path %> </p>
+  </div>
 </div>
