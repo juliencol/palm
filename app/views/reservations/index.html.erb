@@ -1,0 +1,9 @@
+<div class="maint-container">
+  <h1>My reservations</h1>
+  <% @user.reservations.each do |reservation| %>
+    <div class="reservation">
+      <%= reservation.starting_date %>
+      <%= reservation.ending_date %>
+    </div>
+  <% end %>
+</div>
