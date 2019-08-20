@@ -1,5 +1,6 @@
 class Island < ApplicationRecord
   belongs_to :user
-  mount_uploader :photo, PhotoUploader
 
+  has_many :reservations
+  mount_uploader :photo, PhotoUploader
 end

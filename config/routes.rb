@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :islands, only: [:index, :show, :new, :create]
+  resources :islands, only: [:index, :show, :new, :create] do
+    resources :reservations, only: [:new, :create]
+  end
+  resources :reservations, only: [:index, :show]
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
