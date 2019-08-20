@@ -20,8 +20,18 @@ class IslandsController < ApplicationController
     else
       render :new
     end
-
   end
+
+  def edit
+    @island = Island.find(params[:id])
+  end
+
+  def update
+    @island = Island.find(params[:id])
+    @island.update(set_params)
+    redirect_to islands_path
+  end
+
 
   private
 
