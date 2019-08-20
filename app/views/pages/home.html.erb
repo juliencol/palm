@@ -2,28 +2,13 @@
   <div class="banner-container ml-5">
     <h1>Need an island?</h1>
     <p>Palm is here for you!</p>
-    <a class="btn-explore" href="#">Explore</a>
-    <a class="btn-host" href="#" >Host</a>
+    <%= link_to "Explore", islands_path, class: "btn-explore" %>
+    <%= link_to "Host", islands_path, class: "btn-host" %>
   </div>
 </div>
 
-<div class="container mt-5">
+<div class="main-container">
   <h1 class="text-center">Islands available for next week</h1>
-  <div class="container d-flex flex-wrap justify-start">
-    <% @islands.each do |island| %>
-      <%= link_to island_path(island) do %>
-        <div class="card-product">
-            <div class="card-product-infos">
-            <h2><%= island.name %></h2>
-            <p>location: <%= island.location %></p>
-            <p><%= island.description %></p>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
+  <%= render "shared/islands_list" %>
+  <p class="mt-3 text-center"> <%=  link_to "Add your island", new_island_path %> </p>
 </div>
-
-
-
-

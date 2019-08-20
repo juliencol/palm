@@ -41,8 +41,9 @@
   transition: background 0.3s ease;
 }
 
-.btn-explore:hover, .btn-host:hover {
+.btn-host:hover, .btn-explore:hover {
   opacity: 1;
+  text-decoration: none !important;
 }
 
 .btn-ghost {
