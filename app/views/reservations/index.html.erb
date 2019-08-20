@@ -1,9 +1,23 @@
-<div class="maint-container">
-  <h1>My reservations</h1>
-  <% @user.reservations.each do |reservation| %>
-    <div class="reservation">
-      <%= reservation.starting_date %>
-      <%= reservation.ending_date %>
-    </div>
-  <% end %>
+<div class="main-container">
+  <div class="container">
+    <h1>My reservations</h1>
+    <% @user.reservations.each do |reservation| %>
+      <div class="reservation">
+        <%= reservation.starting_date %>
+        <%= reservation.ending_date %>
+      </div>
+    <% end %>
+  </div>
+  <div class="container">
+    <% if @user.islands == [] %>
+      <p>No current islands</p>
+    <% else %>
+      <h1>My islands</h1>
+      <% @user.islands.each do |island| %>
+        <div class="island">
+          <%= island.name %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
