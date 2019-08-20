@@ -9,92 +9,21 @@
 
 <div class="container mt-5">
   <h1 class="text-center">Islands available for next week</h1>
-  <div class="container d-flex flex-wrap justify-content-center">
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2> Island name</h2>
-        <p> Location : 14 rue Crespin du Gast</p>
-        <p> Description : Nice island</p>
-      </div>
-    </div>
+  <div class="container d-flex flex-wrap justify-start">
+    <% @islands.each do |island| %>
+      <%= link_to island_path(island) do %>
+        <div class="card-product">
+            <div class="card-product-infos">
+            <h2><%= island.name %></h2>
+            <p>location: <%= island.location %></p>
+            <p><%= island.description %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
+
+
 
 

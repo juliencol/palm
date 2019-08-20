@@ -1,0 +1,27 @@
+.footer {
+}
+
+.category p {
+  font-weight: bold;
+}
+
+.category li {
+  list-style: none;
+}
+
+.footer-icons {
+  font-size: 30px;
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+}
+.footer-icons a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    display: none;
+  }
+}
+
