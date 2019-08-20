@@ -1,4 +1,5 @@
 <div class="container mt-5">
   <h1><%= @island.name %></h1>
-  <%= link_to "Back to islands", islands_path %>
+  <%= link_to "Book this island", new_island_reservation_path(@island) %>
+  <p> <%= link_to "Back to islands", islands_path %> </p>
 </div>

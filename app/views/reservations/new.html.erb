@@ -1,0 +1,8 @@
+<<h1> Add your island </h1>
+
+<%= simple_form_for [@island, @reservation] do |f| %>
+  <%= f.input :starting_date %>
+  <%= f.input :ending_date %>
+  <%= f.submit "Add my island", class: "btn btn-primary"%>
+<% end %>
+
