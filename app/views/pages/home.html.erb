@@ -2,8 +2,8 @@
   <div class="banner-container ml-5">
     <h1>Need an island?</h1>
     <p>Palm is here for you!</p>
-    <a class="btn-explore" href="#">Explore</a>
-    <a class="btn-host" href="#" >Host</a>
+    <%= link_to "Explore", islands_path, class: "btn-explore" %>
+    <%= link_to "Host", islands_path, class: "btn-host" %>
   </div>
 </div>
 
@@ -12,5 +12,3 @@
   <%= render "shared/islands_list" %>
   <p class="mt-3 text-center"> <%=  link_to "Add your island", new_island_path %> </p>
 </div>
-
-
