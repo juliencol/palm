@@ -3,4 +3,5 @@ class Island < ApplicationRecord
 
   has_many :reservations
   mount_uploader :photo, PhotoUploader
+
 end
