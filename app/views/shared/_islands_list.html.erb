@@ -1,16 +1,16 @@
 <div class=" d-flex flex-wrap justify-center">
   <% @islands.each do |island| %>
-    <div class="card-trip">
-      <img src=<%= island.photo %>>
-      <div class="card-trip-infos">
-        <%= link_to island_path(island) do %>
-          <div>
-            <h2><%= island.name %></h2>
-            <p><%= island.location %></p>
+    <%= link_to island_path(island) do %>
+      <div class="card-trip">
+          <img src= <%= island.photo %> >
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= island.name %></h2>
+              <p><%= island.location %></p>
+            </div>
+            <h2 class="card-trip-pricing"> <%= island.price_by_night %>€ / night </h2>
           </div>
-        <% end %>
-        <h2 class="card-trip-pricing"> <%= island.price_by_night %>€ / night </h2>
       </div>
-    </div>
+    <% end %>
   <% end  %>
 </div>
