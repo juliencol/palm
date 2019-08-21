@@ -17,11 +17,11 @@ le_wagon = Island.new(
   description: "cool island, very nice to learn Ruby",
   booked: false,
   user_id: rand(1..10),
-  photo: "http://bindies.fr/wp-content/uploads/2016/11/LEWAGON_20151210_HD-1.jpg",
+  photo: "https://res.cloudinary.com/dovu27lye/image/upload/v1566392263/LEWAGON_20151210_HD-1_vn9rbq.jpg",
   price_by_night: 6900
 )
 
-le_wagon.remote_photo_url = "http://bindies.fr/wp-content/uploads/2016/11/LEWAGON_20151210_HD-1.jpg"
+le_wagon.remote_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566392263/LEWAGON_20151210_HD-1_vn9rbq.jpg"
 le_wagon.save!
 
 corsica = Island.new(
