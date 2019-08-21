@@ -32,7 +32,7 @@ end
 def destroy
   @reservation = Reservation.find(params[:id])
   @reservation.destroy
-  redirect_to root_path
+  redirect_to reservations_path
 end
 
 private
