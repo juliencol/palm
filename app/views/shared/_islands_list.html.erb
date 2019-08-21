@@ -3,10 +3,12 @@
     <div class="card-trip">
       <img src=<%= island.photo %>>
       <div class="card-trip-infos">
-        <div>
-          <h2><%= island.name %></h2>
-          <p><%= island.location %></p>
-        </div>
+        <%= link_to island_path(island) do %>
+          <div>
+            <h2><%= island.name %></h2>
+            <p><%= island.location %></p>
+          </div>
+        <% end %>
         <h2 class="card-trip-pricing"> <%= island.price_by_night %>€</h2>
       </div>
     </div>
