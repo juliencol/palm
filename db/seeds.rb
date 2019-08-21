@@ -70,11 +70,11 @@ tahiti = Island.new(
   description: "I don't know I have never been there",
   booked: false,
   user_id: rand(1..10),
-  photo: "https://wallpapersafari.com/w/LGPgu3",
+  photo: "https://images7.alphacoders.com/673/673731.jpg",
   price_by_night: 500
 )
 
-tahiti.remote_photo_url = "https://wallpapersafari.com/w/LGPgu3"
+tahiti.remote_photo_url = "https://images7.alphacoders.com/673/673731.jpg"
 tahiti.save!
 
 ireland = Island.new(
