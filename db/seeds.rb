@@ -10,88 +10,136 @@ puts "Creating 10 users..."
 end
 
 puts "Creating 10 islands..."
-islands_data = []
-islands_data << {
+
+le_wagon = Island.new(
   name: "Le Wagon",
   location: "14 rue Crespin du Gast",
   description: "cool island, very nice to learn Ruby",
   booked: false,
-  user_id: rand(1..10)
-}
+  user_id: rand(1..10),
+  photo: "http://bindies.fr/wp-content/uploads/2016/11/LEWAGON_20151210_HD-1.jpg",
+  price_by_night: 6900
+)
 
-islands_data << {
+le_wagon.remote_photo_url = "http://bindies.fr/wp-content/uploads/2016/11/LEWAGON_20151210_HD-1.jpg"
+le_wagon.save!
+
+corsica = Island.new(
   name: "Corsica",
   location: "near the sea",
   description: "nice island, the water is pretty clear",
   booked: false,
-  user_id: rand(1..10)
-}
+  user_id: rand(1..10),
+  photo: "https://tourismleader.com/wp-content/uploads/2017/03/Corsica.jpg",
+  price_by_night: 2000
+)
 
-islands_data << {
+corsica.remote_photo_url = "https://tourismleader.com/wp-content/uploads/2017/03/Corsica.jpg"
+corsica.save!
+
+
+hawai = Island.new(
   name: "Hawai",
   location: "somewhere",
   description: "good for surf",
   booked: false,
-  user_id: rand(1..10)
-}
+  user_id: rand(1..10),
+  photo: "https://shrewsbury.comunicas.org/wp-content/uploads/sites/121/2016/02/Hawaii-1.jpg",
+  price_by_night: 60000
+)
 
-islands_data << {
+hawai.remote_photo_url = "https://shrewsbury.comunicas.org/wp-content/uploads/sites/121/2016/02/Hawaii-1.jpg"
+hawai.save!
+
+mykonos = Island.new(
   name: "Mykonos",
   location: "somewhere in Greece",
   description: "you could meet beautiful women here...",
   booked: false,
-  user_id: rand(1..10)
-}
+  user_id: rand(1..10),
+  photo: "https://wallpapercave.com/wp/wp2163790.jpg",
+  price_by_night: 4300
+)
 
-islands_data << {
+mykonos.remote_photo_url = "https://wallpapercave.com/wp/wp2163790.jpg"
+mykonos.save!
+
+tahiti = Island.new(
   name: "Tahiti",
   location: "far away I guess",
   description: "I don't know I have never been there",
   booked: false,
-  user_id: rand(1..10)
-}
+  user_id: rand(1..10),
+  photo: "https://wallpapersafari.com/w/LGPgu3",
+  price_by_night: 500
+)
 
-islands_data << {
+tahiti.remote_photo_url = "https://wallpapersafari.com/w/LGPgu3"
+tahiti.save!
+
+ireland = Island.new(
   name: "Ireland",
   location: "Ireland, pretty obvious",
   description: "weird place",
   booked: false,
-  user_id: rand(1..10)
-}
+  user_id: rand(1..10),
+  photo: "https://mcdn.wallpapersafari.com/medium/28/53/gZce3x.jpg",
+  price_by_night: 25000
+)
 
-islands_data << {
+ireland.remote_photo_url = "https://mcdn.wallpapersafari.com/medium/28/53/gZce3x.jpg"
+ireland.save!
+
+bora_bora = Island.new(
   name: "Bora Bora",
   location: "South Pacific",
   description: "nice to see",
   booked: false,
-  user_id: rand(1..10)
-}
+  user_id: rand(1..10),
+  photo: "https://www.kinggoya.com/wp-content/uploads/2014/12/tetiaroa-med.jpg",
+  price_by_night: 100000
+)
 
-islands_data << {
+bora_bora.remote_photo_url = "https://www.kinggoya.com/wp-content/uploads/2014/12/tetiaroa-med.jpg"
+bora_bora.save!
+
+santorini = Island.new(
   name: "Santorini",
   location: "Greece",
   description: "very cute place",
   booked: false,
-  user_id: rand(1..10)
-}
+  user_id: rand(1..10),
+  photo: "https://allhdwallpapers.com/wp-content/uploads/2015/06/Santorini-1.jpg",
+  price_by_night: 4300
+)
 
-islands_data << {
+santorini.remote_photo_url = "https://allhdwallpapers.com/wp-content/uploads/2015/06/Santorini-1.jpg"
+santorini.save!
+
+java = Island.new(
   name: "Java",
   location: "server side",
   description: "an island with the name of a programming language..",
   booked: false,
-  user_id: rand(1..10)
-}
+  user_id: rand(1..10),
+  photo: "https://3.bp.blogspot.com/-0RHWnDMpzGQ/XAeLQc7ieNI/AAAAAAAAB9Y/nc5psFI_wwErYiUdRI5P7ERz6rg5lTl0gCHMYCw/s1600/beaches-bali-java-clouds-beautiful-panorama-island-beach-sky.jpg",
+  price_by_night: 5500
+)
 
-islands_data << {
+java.remote_photo_url = "https://3.bp.blogspot.com/-0RHWnDMpzGQ/XAeLQc7ieNI/AAAAAAAAB9Y/nc5psFI_wwErYiUdRI5P7ERz6rg5lTl0gCHMYCw/s1600/beaches-bali-java-clouds-beautiful-panorama-island-beach-sky.jpg"
+java.save!
+
+milos = Island.new(
   name: "Milos",
   location: "Greece",
   description: "Pretty island lost in Greece",
   booked: false,
-  user_id: rand(1..10)
-}
+  user_id: rand(1..10),
+  photo: "https://www.voyagetips.com/wp-content/uploads/2018/10/milos.jpg",
+  price_by_night: 6700
+)
 
-Island.create!(islands_data)
+milos.remote_photo_url = "https://www.voyagetips.com/wp-content/uploads/2018/10/milos.jpg"
+milos.save!
+
 puts "Everything worked just fine."
-
-

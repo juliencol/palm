@@ -1,4 +1,4 @@
-
+<!--
 <div class="container d-flex flex-wrap justify-start">
   <% @islands.each do |island| %>
     <%= link_to island_path(island) do %>
@@ -12,21 +12,19 @@
       </div>
     <% end %>
   <% end %>
-</div>
+</div> -->
 
-<div class="card-trip">
-    <% @islands.each do |island| %>
-    <%= link_to island_path(island) do %>
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= island.name %></h2>
-      <p> Location: <%= island.location %></p>
-      <p><%= island.description %></p>
+<div class=" d-flex flex-wrap justify-center">
+  <% @islands.each do |island| %>
+    <div class="card-trip">
+      <img src=<%= island.photo %>>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= island.name %></h2>
+          <p><%= island.location %></p>
+        </div>
+        <h2 class="card-trip-pricing"> <%= island.price_by_night %>€</h2>
+      </div>
     </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-  </div>
-  <% end %>
-  <% end %>
+  <% end  %>
 </div>

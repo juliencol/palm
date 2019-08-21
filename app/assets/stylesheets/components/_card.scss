@@ -15,7 +15,7 @@ a:hover {
   text-decoration: none !important;
 }
 
-.card-product img {
+#card_img {
   height: 100%;
   width: 140px;
   object-fit: cover;
@@ -42,14 +42,16 @@ a:hover {
 }
 
 
-
-
-
-
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 320px;
+  height: 280px;
+  margin: 10px;
+  color: black !important;
+  padding: 0px 0px 20px 0px;
+  align-items: center;
 }
 
 .card-trip > img {
@@ -78,11 +80,3 @@ a:hover {
   align-items: flex-end;
   position: relative;
 }
-
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
-
