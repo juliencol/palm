@@ -5,6 +5,10 @@ def index
   @reservations = Reservation.all
 end
 
+  def show
+    @reservation = Reservation.find(params[:id])
+  end
+
 def new
   @island = Island.find(params[:island_id])
   @reservation = Reservation.new
