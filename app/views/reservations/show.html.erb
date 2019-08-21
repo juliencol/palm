@@ -7,7 +7,8 @@
       <h4 class="card-title text-muted"> <em> Some information about your trip : </em> </h4>
       <p class="card-text text-muted"> Reservation Number : <%= @reservation.id %> </p>
       <p class="card-text text-muted"> Starting date :  <%= @reservation.starting_date %> </p>
-      <p class="card-text text-muted"> Ending date :  <%= @reservation.ending_date %> </p>
+      <p class="card-text text-muted"> Ending date :  <%= @reservation.ending_date %></p>
+      <p class="card-text text-muted">total price: <%= @total_price %></p>
       <p><%= link_to "Back to the home page", root_path, class: "btn btn-outline-dark" %></p>
     </div>
 </div>
