@@ -42,17 +42,14 @@
 
 
     <div class="col-5">
-      <%= simple_form_for [@island, @reservation] do |f| %>
-        <%= f.input :starting_date, label: "Check-in"  %>
-        <%= f.input :ending_date, label: "Check-out" %>
-        <%= f.submit "Book this island 🏝️", class: "btn btn-success btn-lg btn-block" %>
-      <% end %>
 
-      <%= simple_form_for [@island, @reservation] do |f| %>
-      <%= f.input :starting_date, as: :date, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :ending_date, as: :date, required: false, input_html: {class: "datepicker"} %>
-      <%= f.button :submit, "Go", class: "btn btn-primary" %>
-      <% end %>
+    <%= simple_form_for [@island, @reservation] do |f| %>
+      <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.button :submit, "Book this island 🏝️", class: "btn btn-success btn-lg btn-block" %>
+    <% end %>
+  </div>
+
             <!-- <div class="form-group p-0">
               <label for="A name">Check-in</label>
                 <input type="date" class="form-control" placeholder="Check-in">

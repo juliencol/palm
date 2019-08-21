@@ -11,7 +11,7 @@ def new
 end
 
 def create
-  raise
+
   @reservation = Reservation.new(params_reservation)
   @island = Island.find(params[:island_id])
   @reservation.island = @island
