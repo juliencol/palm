@@ -34,10 +34,8 @@
   </div>
 
     <div class="col-7">
-      <h2> Description </h2>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, provident perspiciatis quos non cum, dignissimos nisi beatae accusantium debitis omnis mollitia aperiam quis eaque at fugiat architecto voluptates consequatur obcaecati! </p>
-      <h4> Map </h4>
-        <p> Map ici </p>
+        <p class="mt-5"> Map feature coming soon... Our best developers are working on it. </p>
     </div>
 
 
@@ -46,6 +44,7 @@
     <%= simple_form_for [@island, @reservation] do |f| %>
       <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <p><strong>total price:</strong> <%= @total_price %></p>
       <%= f.button :submit, "Book this island 🏝️", class: "btn btn-success btn-lg btn-block" %>
     <% end %>
   </div>

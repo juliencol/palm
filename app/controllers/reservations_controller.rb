@@ -7,6 +7,8 @@ end
 
 def show
   @reservation = Reservation.find(params[:id])
+  @total_price = "trust me you don't want to know"
+  @number_of_nights = (@reservation.updated_at - @reservation.created_at).to_i
 end
 
 def new

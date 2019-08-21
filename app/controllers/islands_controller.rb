@@ -7,6 +7,10 @@ class IslandsController < ApplicationController
   def show
     @island = Island.find(params[:id])
     @reservation = Reservation.new
+    @total_price = "trust me you don't want to know"
+    if @reservation.updated_at != nil && @reservation.created_at != nil
+      @number_of_nights = @reservation.updated_at - @reservation.created_at
+    end
   end
 
   def new
