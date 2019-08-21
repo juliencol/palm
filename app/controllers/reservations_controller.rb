@@ -10,18 +10,18 @@ end
   end
 
 def new
-  @island = Island.find(params[:island_id])
   @reservation = Reservation.new
+  @island = Island.find(params[:island_id])
+  @reservation.island = @island
 end
 
 def create
-
   @reservation = Reservation.new(params_reservation)
-  @island = Island.find(params[:island_id])
-  @reservation.island = @island
   @reservation.user = current_user
+  @reservation.island = Island.find(params[:island_id])
+
   if @reservation.save
-    redirect_to island_path(@island)
+    redirect_to reservation_path(@reservation)
   else
     render :new
   end
@@ -29,7 +29,7 @@ end
 
 private
   def params_reservation
-    params.require(:reservation).permit(:starting_date, :ending_date)
+    params.require(:reservation).permit(:starting_date, :ending_date, :island_id, :user_id)
   end
 end
 
