@@ -1,13 +1,15 @@
 <div class="banner">
   <div class="banner-container ml-5">
-    <h1>Need an island?</h1>
-    <p>Palm is here for you!</p>
+    <p>
+  <span id="banner-typed-text" style="color: font-weight: bold;"></span>
+    </p>
     <%= link_to "Explore", islands_path, class: "btn-explore" %>
     <%= link_to "Host", islands_path, class: "btn-host" %>
   </div>
 </div>
 
-<div class="main-container">
+<div class="main-container .ml-md-3 .ml-lg-0">
+
   <h1 class="text-center">Islands available for next week</h1>
   <%= render "shared/islands_list" %>
   <p class="mt-3 text-center"><%= link_to "Add your island", new_island_path, class: "btn-host" %> </p>
