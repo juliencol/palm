@@ -1,16 +1,16 @@
-
-<div class="container d-flex flex-wrap justify-start">
+<div class=" d-flex flex-wrap justify-center">
   <% @islands.each do |island| %>
-    <%= link_to island_path(island) do %>
-      <div class="card-product">
-        <div class="card-product-infos">
-          <img src="https://res.cloudinary.com/dovu27lye/image/upload/v1566247165/michael-DXQB5D1njMY-unsplash_ow9s7s.jpg" />
-          <h2><%= island.name %></h2>
-          <p> Location: <%= island.location %></p>
-          <p><%= island.description %></p>
-        </div>
+    <div class="card-trip">
+      <img src=<%= island.photo %>>
+      <div class="card-trip-infos">
+        <%= link_to island_path(island) do %>
+          <div>
+            <h2><%= island.name %></h2>
+            <p><%= island.location %></p>
+          </div>
+        <% end %>
+        <h2 class="card-trip-pricing"> <%= island.price_by_night %>€ / night </h2>
       </div>
-    <% end %>
-  <% end %>
+    </div>
+  <% end  %>
 </div>
-
