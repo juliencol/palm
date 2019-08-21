@@ -5,9 +5,9 @@ def index
   @reservations = Reservation.all
 end
 
-  def show
-    @reservation = Reservation.find(params[:id])
-  end
+def show
+  @reservation = Reservation.find(params[:id])
+end
 
 def new
   @reservation = Reservation.new
@@ -27,9 +27,16 @@ def create
   end
 end
 
+def destroy
+  @reservation = Reservation.find(params[:id])
+  @reservation.destroy
+  redirect_to root_path
+end
+
 private
   def params_reservation
     params.require(:reservation).permit(:starting_date, :ending_date, :island_id, :user_id)
   end
+
 end
 

@@ -11,7 +11,9 @@
           <h3> <%= reservation.island.name %></h3>
           <p>Check in on: <%= reservation.starting_date %></p>
           <p>Ckeck out on: <%= reservation.ending_date %></p>
-          <p><%= link_to "Cancel reservation", "#" %></p>
+          <p><%= link_to "Delete this reservation", reservation_path(reservation),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
         </div>
       <% end %>
     <% end %>

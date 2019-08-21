@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :islands, only: [:index, :show, :new, :create, :edit, :update] do
     resources :reservations, only: [:new, :create]
   end
-  resources :reservations, only: [:index, :show]
+  resources :reservations, only: [:index, :show, :destroy]
 end
