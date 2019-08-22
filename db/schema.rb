@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 2019_08_22_150623) do
     t.string "description"
     t.string "photo"
     t.float "price_by_night"
-    t.float "latitude"
-    t.float "longitude"
     t.string "phototwo"
     t.string "photothree"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_islands_on_user_id"
   end
 
