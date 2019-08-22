@@ -3,11 +3,13 @@
     <div class="card-header text-center">
       <h4> Thank you for your reservation 🌴🍓  </h4>
     </div>
+
       <div class="card-body d-flex flex-column justify-content-center align-items-center border-top">
         <h4 class="card-title text-muted"> <em> Some information about your trip : </em> </h4>
         <p class="card-text text-muted"> Reservation Number : <%= @reservation.id %> </p>
         <p class="card-text text-muted"> Starting date :  <%= @reservation.starting_date %> </p>
         <p class="card-text text-muted"> Ending date :  <%= @reservation.ending_date %> </p>
+        <p class="card-text text-muted">total price: <%= @total_price %></p>
         <div class ="d-flex align-items-center">
           <p class="mr-3"><%= link_to "Back to the home page", root_path, class: "btn btn-outline-dark " %></p>
           <p class="ml-3"><%= link_to "My reservations", reservations_path, class: "btn btn-outline-dark" %></p>

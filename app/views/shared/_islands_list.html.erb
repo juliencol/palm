@@ -1,4 +1,4 @@
-<div class=" d-flex flex-wrap justify-center">
+<div class=" d-flex flex-wrap justify-content-between">
   <% @islands.each do |island| %>
     <%= link_to island_path(island) do %>
       <div class="card-trip">
@@ -12,5 +12,5 @@
           </div>
       </div>
     <% end %>
-  <% end  %>
+  <% end %>
 </div>
