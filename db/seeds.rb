@@ -18,6 +18,8 @@ le_wagon = Island.new(
   booked: false,
   user_id: rand(1..10),
   photo: "https://res.cloudinary.com/dovu27lye/image/upload/v1566392263/LEWAGON_20151210_HD-1_vn9rbq.jpg",
+  phototwo: "https://res.cloudinary.com/dovu27lye/image/upload/v1566392263/LEWAGON_20151210_HD-1_vn9rbq.jpg",
+  photothree: "https://res.cloudinary.com/dovu27lye/image/upload/v1566392263/LEWAGON_20151210_HD-1_vn9rbq.jpg",
   price_by_night: 6900
 )
 

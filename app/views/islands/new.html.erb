@@ -19,13 +19,9 @@
                 <br>
                 <div class="form-group">
                   <%= f.label :description, label: "Upload up to 3 pictures:" %>
-                  <%= f.input :photo %>
-                  <%= f.input :photo_cache, as: :hidden %>
-                  <%= f.input :phototwo %>
-                  <%= f.input :photo_cache, as: :hidden %>
-                  <%= f.input :photothree %>
-                  <%= f.input :photo_cache, as: :hidden %>
-                </div>
+                  <%= f.input :photo, label: "Add a picture" %>
+                  <%= f.input :phototwo, as: :file, label: "Add a picture" %>
+                  <%= f.input :photothree, as: :file, label: "Add a picture" %>
                 </div>
               <div class="mt-3">
                 <%= f.submit class: 'btn btn-secondary' %>
