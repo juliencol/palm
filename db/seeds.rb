@@ -1,6 +1,6 @@
 puts "Cleaning database..."
 Island.destroy_all
-
+User.destroy_all
 puts "Creating 10 users..."
 10.times do
   user = User.create!(

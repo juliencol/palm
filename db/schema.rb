@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_08_22_105005) do
+=======
+ActiveRecord::Schema.define(version: 2019_08_22_092718) do
+>>>>>>> 124277e7238d20466e9570df2bb460eaca54f753
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,8 +29,13 @@ ActiveRecord::Schema.define(version: 2019_08_22_105005) do
     t.string "description"
     t.string "photo"
     t.float "price_by_night"
+<<<<<<< HEAD
     t.string "phototwo"
     t.string "photothree"
+=======
+    t.float "latitude"
+    t.float "longitude"
+>>>>>>> 124277e7238d20466e9570df2bb460eaca54f753
     t.index ["user_id"], name: "index_islands_on_user_id"
   end
 

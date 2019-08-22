@@ -18,10 +18,16 @@
                 <%= f.text_field :description, class: 'form-control' %>
                 <br>
                 <div class="form-group">
+<<<<<<< HEAD
                   <%= f.label :description, label: "Upload up to 3 pictures:" %>
                   <%= f.input :photo, label: "Add a picture" %>
                   <%= f.input :phototwo, as: :file, label: "Add a picture" %>
                   <%= f.input :photothree, as: :file, label: "Add a picture" %>
+=======
+                  <%= f.input :photo, label: "Upload an amazing picture:"  %>
+                  <%= f.input :photo_cache, as: :hidden %>
+                </div>
+>>>>>>> 124277e7238d20466e9570df2bb460eaca54f753
                 </div>
               <div class="mt-3">
                 <%= f.submit class: 'btn btn-secondary' %>
