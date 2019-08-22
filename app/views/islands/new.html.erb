@@ -18,7 +18,12 @@
                 <%= f.text_field :description, class: 'form-control' %>
                 <br>
                 <div class="form-group">
-                  <%= f.input :photo, label: "Updload an amazing picture:"  %>
+                  <%= f.label :description, label: "Upload up to 3 pictures:" %>
+                  <%= f.input :photo %>
+                  <%= f.input :photo_cache, as: :hidden %>
+                  <%= f.input :photo2 %>
+                  <%= f.input :photo_cache, as: :hidden %>
+                  <%= f.input :photo3 %>
                   <%= f.input :photo_cache, as: :hidden %>
                 </div>
                 </div>
