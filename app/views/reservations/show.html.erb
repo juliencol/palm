@@ -9,7 +9,7 @@
         <p class="card-text text-muted"> Reservation Number : <%= @reservation.id %> </p>
         <p class="card-text text-muted"> Starting date :  <%= @reservation.starting_date %> </p>
         <p class="card-text text-muted"> Ending date :  <%= @reservation.ending_date %> </p>
-        <p class="card-text text-muted">total price: <%= @total_price %></p>
+        <p class="card-text text-muted"> Total price: <%= (DateTime.parse(@reservation.ending_date).to_i - DateTime.parse(@reservation.starting_date).to_i).fdiv(3600)*@island.price_by_night %> €</p>
         <div class ="d-flex align-items-center">
           <p class="mr-3"><%= link_to "Back to the home page", root_path, class: "btn btn-outline-dark " %></p>
           <p class="ml-3"><%= link_to "My reservations", reservations_path, class: "btn btn-outline-dark" %></p>
