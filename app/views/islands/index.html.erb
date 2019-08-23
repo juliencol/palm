@@ -1,8 +1,22 @@
-<div class="container main-container">
-  <h1 class="text-center">Book your Island</h1>
-  <%= render "shared/islands_list" %>
-    <p class="mt-3 text-center"><%= link_to "Add your island", new_island_path, class: "btn-host" %> </p>
-
+<div class="main-container">
+  <h1 class="text-center">Islands available</h1>
+  <div class=" d-flex flex-wrap justify-content-between">
+    <% @islands.each do |island| %>
+      <%= link_to island_path(island) do %>
+          <div class="card-trip">
+              <img src= <%= island.photo %> >
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= island.name %></h2>
+                  <p><%= island.location %></p>
+                </div>
+                <h2 class="card-trip-pricing"> <%= island.price_by_night %>€ / night </h2>
+              </div>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
 <div
   id="map"
@@ -12,3 +26,5 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
 </div>
+
+
