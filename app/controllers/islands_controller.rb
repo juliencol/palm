@@ -8,11 +8,6 @@ class IslandsController < ApplicationController
         lng: @island.longitude
       }
     @reservation = Reservation.new
-    # "trust me you don't want to know"
-    # if @reservation.updated_at != nil && @reservation.created_at != nil
-    #   @number_of_nights = @reservation.updated_at - @reservation.created_at
-    # end
-
   end
 
   def new
