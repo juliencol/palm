@@ -31,6 +31,9 @@
           <h3><%= island.name %></h3>
           <p>location: <%= island.location %></p>
           <p>description: <%= island.description %></p>
+          <p><%= link_to "Delete this reservation 🙊", island_path(island),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
         </div>
       <% end %>
     <% end %>

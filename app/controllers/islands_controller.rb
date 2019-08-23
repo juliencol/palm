@@ -50,10 +50,16 @@ class IslandsController < ApplicationController
     redirect_to islands_path
   end
 
+  def destroy
+  @island = Island.find(params[:id])
+  @island.destroy
+  redirect_to reservations_path
+end
+
 
   private
 
   def set_params
-    params.require(:island).permit(:name, :location, :description, :booked, :photo, :phototwo, :photothree)
+    params.require(:island).permit(:name, :location, :description, :booked, :photo, :phototwo, :photothree, :price_by_night)
   end
 end
