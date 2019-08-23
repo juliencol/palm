@@ -12,7 +12,7 @@ puts "Creating 10 islands..."
 
 le_wagon = Island.new(
   name: "Le Wagon",
-  location: "14 rue Crespin du Gast",
+  location: "14 rue Crespin du Gast, 75011 Paris",
   description: "cool island, very nice to learn Ruby",
   booked: false,
   user_id: rand(1..10),
@@ -27,7 +27,7 @@ le_wagon.save!
 
 corsica = Island.new(
   name: "Corsica",
-  location: "near the sea",
+  location: "Bastia",
   description: "nice island, the water is pretty clear",
   booked: false,
   user_id: rand(1..10),
@@ -54,7 +54,7 @@ hawai.save!
 
 mykonos = Island.new(
   name: "Mykonos",
-  location: "somewhere in Greece",
+  location: "Greece",
   description: "you could meet beautiful women here...",
   booked: false,
   user_id: rand(1..10),
