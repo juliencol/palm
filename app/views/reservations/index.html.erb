@@ -13,7 +13,7 @@
       <h1 class="mb-5">My reservations</h1>
       <% if @user.reservations == [] %>
         <p>You don't have any reservation.</p>
-        <p><%= link_to "Add a new reservation", islands_path %></p>
+        <p><%= link_to "Add a new reservation", root_path %></p>
       <% else %>
         <% @user.reservations.each do |reservation| %>
           <div class="card-reservation">
@@ -24,9 +24,9 @@
         method: :delete,
         data: { confirm: "Are you sure?" } %></p>
           </div>
+          <p class="mt-5 text-center"><%= link_to "Add another reservation", root_path %></p>
         <% end %>
       <% end %>
-      <p class="mt-5 text-center"><%= link_to "Add another reservation", islands_path %></p>
     </div>
   </div>
 
