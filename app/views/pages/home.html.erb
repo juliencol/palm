@@ -3,7 +3,7 @@
 </div>
 <div class="main-container .ml-md-3 .ml-lg-0">
   <h1 class="text-center">Our recommandations</h1>
-  <div id ="recommandations" class=" d-flex flex-wrap justify-content-between">
+  <div id ="recommandations" class=" d-flex flex-wrap">
     <% @islands.each do |island| %>
       <%= link_to island_path(island) do %>
         <div class="card-trip">
