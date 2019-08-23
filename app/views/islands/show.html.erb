@@ -60,12 +60,12 @@
 
 
     <div class="col-5">
-
-    <%= simple_form_for [@island, @reservation] do |f| %>
-      <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.button :submit, "Book this island 🏝️", class: "btn btn-dark btn-lg btn-block" %>
-    <% end %>
+      <%= simple_form_for [@island, @reservation] do |f| %>
+        <%= f.input :starting_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+        <%= f.input :ending_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+        <%= f.button :submit, "Book this island 🏝️", class: "btn btn-dark btn-lg btn-block" %>
+      <% end %>
+      <% else %>
   </div>
   <%= link_to 'Back to islands', root_path, class: 'btn btn-dark ml-2 mb-5' %>
 </div>

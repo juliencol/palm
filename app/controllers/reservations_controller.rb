@@ -6,9 +6,9 @@ def index
 end
 
 def show
-  @island = Island.find(params[:id])
-  @price_by_night = @island.price_by_night
   @reservation = Reservation.find(params[:id])
+  @island = @reservation.island
+  @price_by_night = @island.price_by_night
 end
 
 def new
