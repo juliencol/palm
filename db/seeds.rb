@@ -4,8 +4,18 @@ User.destroy_all
 
 puts "Creating Bill Gates..."
 bill_gates = User.create!(
+  first_name: "Bill",
+  last_name: "Gates",
   email: "billgates@gmail.com",
-  encrypted_password: "password"
+  password: "password"
+)
+
+puts "Creating Pierrick..."
+pierrick = User.create!(
+  first_name: "Pierrick",
+  last_name: "Delage",
+  email: "pierrick@gmail.com",
+  password: "password"
 )
 
 puts "Creating 12 islands..."
