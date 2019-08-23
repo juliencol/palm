@@ -12,7 +12,7 @@ puts "Creating 10 islands..."
 
 le_wagon = Island.new(
   name: "Le Wagon",
-  location: "14 rue Crespin du Gast, 75011 Paris",
+  location: "16 Villa Gaudelet, 75011 Paris",
   description: "cool island, very nice to learn Ruby",
   booked: false,
   user_id: rand(1..10),
@@ -27,7 +27,7 @@ le_wagon.save!
 
 corsica = Island.new(
   name: "Corsica",
-  location: "Bastia",
+  location: "Bastia, Corsica",
   description: "nice island, the water is pretty clear",
   booked: false,
   user_id: rand(1..10),
@@ -41,7 +41,7 @@ corsica.save!
 
 hawai = Island.new(
   name: "Hawai",
-  location: "somewhere",
+  location: "Honolulu",
   description: "good for surf",
   booked: false,
   user_id: rand(1..10),
@@ -54,7 +54,7 @@ hawai.save!
 
 mykonos = Island.new(
   name: "Mykonos",
-  location: "Greece",
+  location: "Ornos, Mykonos",
   description: "you could meet beautiful women here...",
   booked: false,
   user_id: rand(1..10),
@@ -67,7 +67,7 @@ mykonos.save!
 
 tahiti = Island.new(
   name: "Tahiti",
-  location: "far away I guess",
+  location: "Papeete, French Polynesia",
   description: "I don't know I have never been there",
   booked: false,
   user_id: rand(1..10),
@@ -80,7 +80,7 @@ tahiti.save!
 
 ireland = Island.new(
   name: "Ireland",
-  location: "Ireland, pretty obvious",
+  location: "Dublin, Ireland",
   description: "weird place",
   booked: false,
   user_id: rand(1..10),
@@ -93,7 +93,7 @@ ireland.save!
 
 bora_bora = Island.new(
   name: "Bora Bora",
-  location: "South Pacific",
+  location: "Vaitape, French Polynesia",
   description: "nice to see",
   booked: false,
   user_id: rand(1..10),
@@ -106,7 +106,7 @@ bora_bora.save!
 
 santorini = Island.new(
   name: "Santorini",
-  location: "Greece",
+  location: "Thera, Greece",
   description: "very cute place",
   booked: false,
   user_id: rand(1..10),
@@ -119,7 +119,7 @@ santorini.save!
 
 java = Island.new(
   name: "Java",
-  location: "server side",
+  location: "Jakarta, Indonesia",
   description: "an island with the name of a programming language..",
   booked: false,
   user_id: rand(1..10),
@@ -132,7 +132,7 @@ java.save!
 
 milos = Island.new(
   name: "Milos",
-  location: "Greece",
+  location: "Kanava, Greece",
   description: "Pretty island lost in Greece",
   booked: false,
   user_id: rand(1..10),
