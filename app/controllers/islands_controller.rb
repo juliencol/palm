@@ -18,7 +18,7 @@ class IslandsController < ApplicationController
         lat: @island.latitude,
         lng: @island.longitude
       }
-    @reservation = Reservation.new(user_id: current_user.id)
+    @reservation = Reservation.new
     @total_price = "trust me you don't want to know"
     if @reservation.updated_at != nil && @reservation.created_at != nil
       @number_of_nights = @reservation.updated_at - @reservation.created_at
