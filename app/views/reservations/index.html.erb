@@ -16,17 +16,20 @@
         <p><%= link_to "Add a new reservation", root_path %></p>
       <% else %>
         <% @user.reservations.each do |reservation| %>
-          <div class="card-reservation">
-            <h3> <%= reservation.island.name %></h3>
-            <p>Check in on: <%= reservation.starting_date %></p>
-            <p>Ckeck out on: <%= reservation.ending_date %></p>
-            <p><%= link_to "Delete this reservation 🙊", reservation_path(reservation),
-        method: :delete,
-        data: { confirm: "Are you sure?" } %></p>
+          <div class="card-product">
+          <img src=<%= reservation.island.photo %> />
+              <div class="card-product-infos">
+              <h3> <%= reservation.island.name %></h3>
+              <p>Check in on: <%= reservation.starting_date %></p>
+              <p>Ckeck out on: <%= reservation.ending_date %></p>
+              <p><%= link_to "Delete this reservation 🙊", reservation_path(reservation),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %></p>
+              </div>
           </div>
-          <p class="mt-5 text-center"><%= link_to "Add another reservation", root_path %></p>
         <% end %>
       <% end %>
+          <p class="mt-5 text-center"><%= link_to "Add another reservation", root_path %></p>
     </div>
   </div>
 
