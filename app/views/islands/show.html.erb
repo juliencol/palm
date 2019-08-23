@@ -1,15 +1,30 @@
 <div class="main-container ">
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
   <div class="carousel-inner" >
     <div class="carousel-item active">
-      <img  class="d-block w-80" alt="..." src=<%= @island.photo %> >
+      <img class="d-block w-80" alt=" Image not uploaded" src=<%= @island.photo %> >
     </div>
-    <div class="carousel-item ">
-      <img class="d-block w-80" alt=" Image not uploaded" src=<%= @island.phototwo %> >
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-80" alt=" Image not uploaded" src=<%= @island.photothree %> >
-    </div>
+
+    <% if @island.phototwo == true %>
+      <div class="carousel-item ">
+        <img class="d-block w-80" alt=" Image not uploaded" src=<%= @island.phototwo %> >
+      </div>
+    <% else %>
+      <div class="carousel-item ">
+        <img class="d-block w-80" alt=" Image not uploaded" src=<%= @island.photo %> >
+      </div>
+    <% end %>
+
+    <% if @island.photothree == true %>
+      <div class="carousel-item ">
+        <img class="d-block w-80" alt=" Image not uploaded" src=<%= @island.photothree %> >
+      </div>
+    <% else %>
+      <div class="carousel-item ">
+        <img class="d-block w-80" alt=" Image not uploaded" src=<%= @island.photo %> >
+      </div>
+    <% end %>
 
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -30,6 +45,7 @@
   <div class="row">
     <div class="col-7">
     <h1><%= @island.name %></h1>
+
     <h2><%= @island.location %></h2>
     <h2><%= @island.price_by_night %> € per night </h2>
       <%= image_tag "https://kitt.lewagon.com/placeholder/users/ok-gaetan", class: "avatar-position avatar-bordered", alt: "avatar-position" %>
@@ -37,11 +53,11 @@
 
     <div class="col-7">
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, provident perspiciatis quos non cum, dignissimos nisi beatae accusantium debitis omnis mollitia aperiam quis eaque at fugiat architecto voluptates consequatur obcaecati! </p>
-        <p class="mt-5"> Map feature coming soon... Our best developers are working on it.
+        <p class="mt-5">
          <div
           id="map"
           style="width: 100%;
-          height: 600px;"
+          height: 400px;"
           data-markers="<%= @marker.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
         ></div></p>
@@ -54,7 +70,7 @@
       <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
       <p><strong>total price:</strong> <%= @total_price %></p>
-      <%= f.button :submit, "Book this island 🏝️", class: "btn btn-success btn-lg btn-block" %>
+      <%= f.button :submit, "Book this island 🏝️", class: "btn btn-dark btn-lg btn-block" %>
     <% end %>
   </div>
 
@@ -86,9 +102,5 @@
  -->
 
     </div>
-
-        <p> <%= link_to "Back to islands", islands_path %> </p>
-
-
-
+    <%= link_to 'Back to islands', islands_path, class: 'btn btn-dark ml-2 mb-5' %>
     </div>
