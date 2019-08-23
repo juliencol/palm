@@ -52,6 +52,12 @@ class IslandsController < ApplicationController
     redirect_to islands_path
   end
 
+  def destroy
+  @island = Island.find(params[:id])
+  @island.destroy
+  redirect_to reservations_path
+end
+
 
   private
 
