@@ -23,6 +23,7 @@
               <p>Check in on: <%= reservation.starting_date %></p>
               <p>Ckeck out on: <%= reservation.ending_date %></p>
               <p> Total price: <%= (DateTime.parse(reservation.ending_date).to_i - DateTime.parse(reservation.starting_date).to_i).fdiv(3600)*reservation.island.price_by_night %> €</p>
+              <p>Waiting for confirmation by <%= reservation.island.user.first_name %></p>
               <p><%= link_to "Delete this reservation 🙊", reservation_path(reservation),
           method: :delete,
           data: { confirm: "Are you sure?" } %></p>
