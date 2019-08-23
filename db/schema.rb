@@ -18,17 +18,17 @@ ActiveRecord::Schema.define(version: 2019_08_23_084919) do
   create_table "islands", force: :cascade do |t|
     t.string "name"
     t.string "location"
+    t.string "booked"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "description"
     t.string "photo"
     t.float "price_by_night"
-    t.boolean "booked", default: false
-    t.float "latitude"
-    t.float "longitude"
     t.string "phototwo"
     t.string "photothree"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_islands_on_user_id"
   end
 
@@ -65,8 +65,6 @@ ActiveRecord::Schema.define(version: 2019_08_23_084919) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.float "minimum_price"
-    t.float "maximum_price"
     t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
