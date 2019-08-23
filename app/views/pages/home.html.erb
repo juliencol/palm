@@ -1,14 +1,33 @@
 <div class="banner">
-  <div class="banner-container ml-5">
-
-  <h3><span id="banner-typed-text" style="color: white"></span> </h3>
-
-    <%= link_to "Explore", islands_path, class: "btn-explore" %>
-    <%= link_to "Host", islands_path, class: "btn-host" %>
+  <br>
+  <br>
+  <a href="#recommandations" class="btn btn-secondary ml-5">Book an island!</a>
+</div>
+<div class="main-container .ml-md-3 .ml-lg-0">
+  <h1 class="text-center">Our recommandations</h1>
+  <div id ="recommandations" class=" d-flex flex-wrap">
+    <% @islands.each do |island| %>
+      <%= link_to island_path(island) do %>
+        <div class="card-trip">
+            <img src= <%= island.photo %> >
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= island.name %></h2>
+                <p><%= island.location %></p>
+              </div>
+              <h2 class="card-trip-pricing"> <%= island.price_by_night %>€ / night </h2>
+            </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
-<div class="main-container .ml-md-3 .ml-lg-0">
-  <h1 class="text-center">Islands available for next week</h1>
-  <%= render "shared/islands_list" %>
-</div>
+<div
+  id="map"
+  style="width: 100%;
+  height: 500px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
