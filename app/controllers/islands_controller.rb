@@ -1,16 +1,5 @@
 class IslandsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:show, :index]
-  def index
-    @islands = Island.where(booked: false)
-    @islands = Island.geocoded #returns flats with coordinates
-    @markers = @islands.map do |island|
-      {
-        lat: island.latitude,
-        lng: island.longitude
-      }
-    end
-  end
-
+  skip_before_action :authenticate_user!, only: [:show]
   def show
     @island = Island.find(params[:id])
     @marker =
@@ -18,11 +7,11 @@ class IslandsController < ApplicationController
         lat: @island.latitude,
         lng: @island.longitude
       }
-    @reservation = Reservation.new(user_id: current_user.id)
-    @total_price = "trust me you don't want to know"
-    if @reservation.updated_at != nil && @reservation.created_at != nil
-      @number_of_nights = @reservation.updated_at - @reservation.created_at
-    end
+    @reservation = Reservation.new
+    # "trust me you don't want to know"
+    # if @reservation.updated_at != nil && @reservation.created_at != nil
+    #   @number_of_nights = @reservation.updated_at - @reservation.created_at
+    # end
 
   end
 

@@ -10,6 +10,14 @@ bill_gates = User.create!(
   password: "password"
 )
 
+puts "Creating Pierrick..."
+pierrick = User.create!(
+  first_name: "Pierrick",
+  last_name: "Delage",
+  email: "pierrick@gmail.com",
+  password: "password"
+)
+
 puts "Creating 12 islands..."
 
 le_wagon = Island.new(
