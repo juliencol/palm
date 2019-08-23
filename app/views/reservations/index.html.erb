@@ -1,39 +1,54 @@
-<div class="main-container d-flex">
 
-  <div class="container text-center d-flex flex-column align-items-center">
-    <h1 class="mb-5">My reservations</h1>
-    <% if @user.reservations == [] %>
-      <p>You don't have any reservation.</p>
-      <p><%= link_to "Add a new reservation", islands_path %></p>
-    <% else %>
-      <% @user.reservations.each do |reservation| %>
-        <div class="card-reservation">
-          <h3> <%= reservation.island.name %></h3>
-          <p>Check in on: <%= reservation.starting_date %></p>
-          <p>Ckeck out on: <%= reservation.ending_date %></p>
-          <p><%= link_to "Delete this reservation 🙊", reservation_path(reservation),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %></p>
-        </div>
+<div class="main-container p-4" >
+<ul class="list-inline tabs-underlined">
+  <li>
+      <a href="#" id="reservations_btn" class="tab-underlined active">Bookings</a>
+  </li>
+  <li>
+      <a href="#" id="islands_btn"class="tab-underlined">My Islands</a>
+  </li>
+</ul>
+  <div id="reservations">
+    <div class=" text-center d-flex flex-column align-items-center">
+      <h1 class="mb-5">My reservations</h1>
+      <% if @user.reservations == [] %>
+        <p>You don't have any reservation.</p>
+        <p><%= link_to "Add a new reservation", islands_path %></p>
+      <% else %>
+        <% @user.reservations.each do |reservation| %>
+          <div class="card-reservation">
+            <h3> <%= reservation.island.name %></h3>
+            <p>Check in on: <%= reservation.starting_date %></p>
+            <p>Ckeck out on: <%= reservation.ending_date %></p>
+            <p><%= link_to "Delete this reservation 🙊", reservation_path(reservation),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %></p>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-    <p class="mt-5 text-center"><%= link_to "Add another reservation", islands_path %></p>
+      <p class="mt-5 text-center"><%= link_to "Add another reservation", islands_path %></p>
+    </div>
   </div>
 
-  <div class="container text-center d-flex flex-column align-items-center">
-    <h1 class="mb-5">My islands</h1>
-    <% if @user.islands == [] %>
-      <p>You currently don't host any island.</p>
-      <p class="mt-3"> <%=  link_to "Add your island", new_island_path %> </p>
-    <% else %>
-      <% @user.islands.each do |island| %>
-        <div class="card-island">
-          <h3><%= island.name %></h3>
-          <p>location: <%= island.location %></p>
-          <p>description: <%= island.description %></p>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
 
+
+ <div id="my_islands" class="disapear">
+    <div class=" text-center d-flex flex-column align-items-center">
+      <h1 class="mb-5">My islands</h1>
+      <% if @user.islands == [] %>
+        <p>You currently don't host any island.</p>
+        <p class="mt-3"> <%=  link_to "Add your island", new_island_path %> </p>
+      <% else %>
+        <% @user.islands.each do |island| %>
+          <div class="card-island">
+            <h3><%= island.name %></h3>
+            <p>location: <%= island.location %></p>
+            <p>description: <%= island.description %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+
