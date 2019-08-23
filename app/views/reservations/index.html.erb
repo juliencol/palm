@@ -53,7 +53,7 @@
               <% if island.booked == false %>
                 <p>status: available</p>
               <% else %>
-                <p>status: rented by <%= island.user_id.name %></p>
+                <p>status: rented</p>
               <% end %>
               <p><%= link_to "Stop hosting this island", island_path(island),
                 method: :delete,
