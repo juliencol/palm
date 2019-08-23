@@ -29,7 +29,7 @@ le_wagon = Island.new(
   photo: "https://res.cloudinary.com/dovu27lye/image/upload/v1566392263/LEWAGON_20151210_HD-1_vn9rbq.jpg",
   phototwo: "https://res.cloudinary.com/dovu27lye/image/upload/v1566392263/LEWAGON_20151210_HD-1_vn9rbq.jpg",
   photothree: "https://res.cloudinary.com/dovu27lye/image/upload/v1566392263/LEWAGON_20151210_HD-1_vn9rbq.jpg",
-  price_by_night: 6900
+  price_by_night: 69
 )
 
 le_wagon.remote_photo_url = "https://res.cloudinary.com/dovu27lye/image/upload/v1566392263/LEWAGON_20151210_HD-1_vn9rbq.jpg"
@@ -42,7 +42,7 @@ corsica = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://tourismleader.com/wp-content/uploads/2017/03/Corsica.jpg",
-  price_by_night: 2000
+  price_by_night: 20
 )
 
 corsica.remote_photo_url = "https://tourismleader.com/wp-content/uploads/2017/03/Corsica.jpg"
@@ -56,7 +56,7 @@ hawai = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://shrewsbury.comunicas.org/wp-content/uploads/sites/121/2016/02/Hawaii-1.jpg",
-  price_by_night: 60000
+  price_by_night: 600
 )
 
 hawai.remote_photo_url = "https://shrewsbury.comunicas.org/wp-content/uploads/sites/121/2016/02/Hawaii-1.jpg"
@@ -69,7 +69,7 @@ mykonos = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://wallpapercave.com/wp/wp2163790.jpg",
-  price_by_night: 4300
+  price_by_night: 43
 )
 
 mykonos.remote_photo_url = "https://wallpapercave.com/wp/wp2163790.jpg"
@@ -82,7 +82,7 @@ tahiti = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://images7.alphacoders.com/673/673731.jpg",
-  price_by_night: 500
+  price_by_night: 5000
 )
 
 tahiti.remote_photo_url = "https://images7.alphacoders.com/673/673731.jpg"
@@ -95,7 +95,7 @@ ireland = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://mcdn.wallpapersafari.com/medium/28/53/gZce3x.jpg",
-  price_by_night: 25000
+  price_by_night: 250
 )
 
 ireland.remote_photo_url = "https://mcdn.wallpapersafari.com/medium/28/53/gZce3x.jpg"
@@ -108,7 +108,7 @@ bora_bora = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://www.kinggoya.com/wp-content/uploads/2014/12/tetiaroa-med.jpg",
-  price_by_night: 100000
+  price_by_night: 100
 )
 
 bora_bora.remote_photo_url = "https://www.kinggoya.com/wp-content/uploads/2014/12/tetiaroa-med.jpg"
@@ -121,7 +121,7 @@ santorini = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://allhdwallpapers.com/wp-content/uploads/2015/06/Santorini-1.jpg",
-  price_by_night: 4300
+  price_by_night: 43
 )
 
 santorini.remote_photo_url = "https://allhdwallpapers.com/wp-content/uploads/2015/06/Santorini-1.jpg"
@@ -134,7 +134,7 @@ java = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://3.bp.blogspot.com/-0RHWnDMpzGQ/XAeLQc7ieNI/AAAAAAAAB9Y/nc5psFI_wwErYiUdRI5P7ERz6rg5lTl0gCHMYCw/s1600/beaches-bali-java-clouds-beautiful-panorama-island-beach-sky.jpg",
-  price_by_night: 5500
+  price_by_night: 55
 )
 
 java.remote_photo_url = "https://3.bp.blogspot.com/-0RHWnDMpzGQ/XAeLQc7ieNI/AAAAAAAAB9Y/nc5psFI_wwErYiUdRI5P7ERz6rg5lTl0gCHMYCw/s1600/beaches-bali-java-clouds-beautiful-panorama-island-beach-sky.jpg"
@@ -147,7 +147,7 @@ milos = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://www.voyagetips.com/wp-content/uploads/2018/10/milos.jpg",
-  price_by_night: 6700
+  price_by_night: 67
 )
 
 milos.remote_photo_url = "https://www.voyagetips.com/wp-content/uploads/2018/10/milos.jpg"
@@ -160,7 +160,7 @@ ibiza = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://tr-images.condecdn.net/image/YjMP3MVPyv0/crop/1620/f/gettyimages-934900434.jpg",
-  price_by_night: 5400
+  price_by_night: 54
 )
 
 ibiza.remote_photo_url = "https://tr-images.condecdn.net/image/YjMP3MVPyv0/crop/1620/f/gettyimages-934900434.jpg"
@@ -173,7 +173,7 @@ naxos = Island.new(
   booked: false,
   user_id: bill_gates.id,
   photo: "https://www.farosvilla.gr/wp-content/uploads/sites/267/2018/02/alyko-beach_in_naxos-1024x686.jpg",
-  price_by_night: 700
+  price_by_night: 70
 )
 
 naxos.remote_photo_url = "https://www.farosvilla.gr/wp-content/uploads/sites/267/2018/02/alyko-beach_in_naxos-1024x686.jpg"
