@@ -55,7 +55,7 @@
          <div
           id="map"
           style="width: 100%;
-          height: 600px;"
+          height: 400px;"
           data-markers="<%= @marker.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
         ></div></p>
@@ -68,7 +68,7 @@
       <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
       <p><strong>total price:</strong> <%= @total_price %></p>
-      <%= f.button :submit, "Book this island 🏝️", class: "btn btn-success btn-lg btn-block" %>
+      <%= f.button :submit, "Book this island 🏝️", class: "btn btn-dark btn-lg btn-block" %>
     <% end %>
   </div>
 
@@ -100,9 +100,5 @@
  -->
 
     </div>
-
-        <p> <%= link_to "Back to islands", islands_path %> </p>
-
-
-
+    <%= link_to 'Back to islands', islands_path, class: 'btn btn-dark ml-2 mb-5' %>
     </div>
