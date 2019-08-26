@@ -1,2 +1,1 @@
-Palm is an innovative platform allowing you to rent islands all over the world. 
-Visit or website for more at https://airbnb-palm.herokuapp.com/ 
+Rails app generated with lewagon/rails-templates, created by the Le Wagon coding bootcamp team.
